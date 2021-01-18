@@ -9,19 +9,22 @@ public abstract class Clothes {
         this.name = name;
         this.size = size;
     }
-
+    //getter for name
     public String getName() {
         return name;
     }
 
+    //setter for name
     public void setName(String name) {
         this.name = name;
     }
 
+    //getter for size
     public double getSize() {
         return size;
     }
 
+    //setter for size
     public void setSize(double size) {
         this.size = size;
     }
