@@ -3,9 +3,9 @@ import java.io.IOException;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        CollectionManager collectionManager = new CollectionManager();
-        collectionManager.reading(args);
-        Commander commander = new Commander(collectionManager);
-        commander.interactiveMode();
+        Commands commands = new Commands();
+        commands.reading(args);
+        OutputHandler outputHandler = new OutputHandler(commands);
+        outputHandler.manualInput();
     }
 }
