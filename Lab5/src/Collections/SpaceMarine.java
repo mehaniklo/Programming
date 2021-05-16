@@ -29,11 +29,11 @@ public class SpaceMarine {
     private Chapter chapter; //Поле не может быть null
 
     /** Constructor for making a space marine */
-    public SpaceMarine(long id, String name, Coordinates coordinates, String creationDate, int health, AstartesCategory category, Weapon weaponType, MeleeWeapon meleeWeapon, Chapter chapter) {
+    public SpaceMarine(long id, String name, String creationDate, Coordinates coordinates, int health, AstartesCategory category, Weapon weaponType, MeleeWeapon meleeWeapon, Chapter chapter) {
         this.id = id;
         this.name = name;
-        this.coordinates = coordinates;
         this.creationDate = creationDate;
+        this.coordinates = coordinates;
         this.health = health;
         this.category = category;
         this.weapon = weaponType;
@@ -50,11 +50,6 @@ public class SpaceMarine {
      */
     public long getId() {
         return id;
-    }
-
-    /** Method for passing a value to the creation date field */
-    public void setCreationDate(String creationDate) {
-        this.creationDate = creationDate;
     }
 
     /**
@@ -81,12 +76,9 @@ public class SpaceMarine {
         return weapon;
     }
 
-    /**
-     * Method for get current date into string representation
-     * @return String date
-     */
-    public String returnCreationDate() {
-        return ZonedDateTime.now().toString();
+    /** Method for passing a value to the creation date field */
+    public void setCreationDate(String creationDate) {
+        this.creationDate = creationDate;
     }
 
     private List<SpaceMarine> spaceMarineList = null;
